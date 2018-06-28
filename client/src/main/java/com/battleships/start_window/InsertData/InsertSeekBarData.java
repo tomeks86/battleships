@@ -1,11 +1,11 @@
-package com.battleships.start_window;
+package com.battleships.start_window.InsertData;
 
 import com.battleships.Translator;
 import javafx.fxml.FXML;
 import javafx.scene.control.Label;
 import javafx.scene.control.Slider;
 
-public class CountAdjusterWindow extends InitFromStartWindow {
+public class InsertSeekBarData {
     // Count Progress Bars // TODO try to group these 3 elements to a new class
     @FXML
     private Label rowsTextLabel;
@@ -22,9 +22,9 @@ public class CountAdjusterWindow extends InitFromStartWindow {
     @FXML
     private Label columnsAmountDisplayer;
 
-    public CountAdjusterWindow() {
-//        initRowsProgressBar();
-//        initColumnsProgressBar();
+    public void initialize() {
+        initRowsProgressBar();
+        initColumnsProgressBar();
     }
 
     private void initRowsProgressBar() {
