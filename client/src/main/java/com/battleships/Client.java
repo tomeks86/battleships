@@ -6,14 +6,12 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
 
-import java.util.Locale;
-import java.util.ResourceBundle;
-
 public class Client extends Application {
 
     @Override
     public void start(Stage primaryStage) throws Exception {
-        FXMLLoader loader = new FXMLLoader(getClass().getResource("settings.fxml"));
+        System.out.println(getClass().getResource("start_window.fxml").toString());
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("start_window.fxml"));
         Parent root = loader.load();
 //        root.getStylesheets().add(getClass().getResource("style.css").toString());
         primaryStage.setTitle("battleships");

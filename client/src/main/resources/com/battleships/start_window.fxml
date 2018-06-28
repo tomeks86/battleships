@@ -4,7 +4,7 @@
 <?import javafx.scene.layout.*?>
 <BorderPane xmlns="http://javafx.com/javafx"
             xmlns:fx="http://javafx.com/fxml"
-            fx:controller="com.battleships.settings.Settings"
+            fx:controller="com.battleships.start_window.StartWindow"
             style="-fx-padding: 16 16 16 16">
     <top>
         <HBox alignment="CENTER" style="-fx-padding: 8 8 8 8">
@@ -25,21 +25,13 @@
                 <ColumnConstraints percentWidth="70"/>
                 <ColumnConstraints percentWidth="30"/>
             </columnConstraints>
-            <!--<HBox style="-fx-background-color: #fff000" alignment="CENTER">-->
-            <TextField fx:id="ipTextField" text="127.0.0.1:5000" promptText="127.0.0.1:5000" GridPane.rowIndex="0" GridPane.columnIndex="0"/>
-            <Button fx:id="connectToServer" GridPane.rowIndex="0" GridPane.columnIndex="1"/>
-            <!--</HBox>-->
-            <HBox alignment="TOP_CENTER" style="-fx-background-color: #f34ff0" GridPane.rowIndex="2">
-                <TextField fx:id="nameTextField"/>
-                <Label fx:id="nameLabel"/>
-            </HBox>
+
             <VBox style="-fx-background-color: #43fff4" prefHeight="100" prefWidth="100" GridPane.rowIndex="3" GridPane.columnSpan="2">
-                <HBox>
-                    <Label fx:id="rowsTextLabel" style="-fx-padding: 0 8 0 8"/>
-                    <Slider fx:id="rowsProgressBar" min="5" max="20" showTickLabels="true" showTickMarks="true"/>
-                    <Label fx:id="rowsAmountDisplayer" style="-fx-padding: 0 8 0 8"/>
-                </HBox>
+                    <fx:include fx:id="tab1" source="insert_data.fxml" />
             </VBox>
+            <!--<VBox style="-fx-background-color: #43fff4" prefHeight="100" prefWidth="100" GridPane.rowIndex="3" GridPane.columnSpan="2">-->
+                    <!--<fx:include fx:id="insertAdjusterWindow" source="count_adjuster_window.fxml" />-->
+            <!--</VBox>-->
         </GridPane>
     </center>
     <bottom>
